@@ -1,0 +1,75 @@
+/* ======================= */
+/* FORMULARIO DE APADRINAMIENTO */
+/* ======================= */
+/* Asegurar que el contenido principal comience 12vh por debajo del header */
+
+/* Ajustar la posición del formulario */
+.formulario {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+    /* Animación opcional */
+}
+
+
+.formulario h2,
+.formulario h3 {
+    text-align: center;
+    color: #33691D;
+    padding-bottom: 15px;
+}
+
+.formulario div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #33691D;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    /* Fuente consistente */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8BC24A;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

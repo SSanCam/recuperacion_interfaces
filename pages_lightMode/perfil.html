@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Kimba - Perfil</title>
+    <link rel="stylesheet" href="../misc/base.css">
+    <link rel="stylesheet" href="../styles/perfil.css">
+</head>
+
+<body>
+    <!-- POPUP DE CONFIRMACIÓN -->
+    <div id="popup-confirmacion" class="popup">
+        <div class="popup-content">
+            <h2 id="mensaje-confirmacion-texto">Acción realizada con éxito.</h2>
+            <div class="popup-buttons">
+                <button onclick="cerrarPopupConfirmacion()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Pop Up donación -->
+    <div id="popup-donacion" class="popup">
+        <div class="popup-content">
+            <h2>Donación</h2>
+
+            <!-- Formulario de donación -->
+            <form id="form-donacion" onsubmit="procesarDonacion(event)">
+                <label for="titular">Nombre del titular:</label>
+                <input type="text" id="titular" name="titular" required>
+
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
+
+                <label for="cantidad">Cantidad a donar (€):</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+                <button type="submit">Donar</button>
+                <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
+            </form>
+
+            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="container-header">
+            <div class="header-left-space"></div>
+
+            <div class="header-left">
+                <a href="../pages_lightMode/principal.html">
+                    <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
+                </a>
+            </div>
+
+            <nav class="header-center">
+                <a href="../pages_lightMode/sobre_nosotros.html" class="nav-link">Sobre nosotros</a>
+
+                <div class="dropdown">
+                    <a class="nav-link">Adopta</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_lightMode/adopta_perro.html">🐶 Perros</a></li>
+                        <li><a href="../pages_lightMode/adopta_gato.html">🐱 Gatos</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <a class="nav-link">Ayúdales</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_lightMode/acoge.html">🏠 Acoge</a></li>
+                        <li><a href="#" onclick="abrirPopupDonacion(); return false;">💰 Dona</a></li>
+                        <li><a href="../pages_lightMode/apadrina.html">❤️ Apadrina</a></li>
+                    </ul>
+                </div>
+
+                <a href="../pages_lightMode/contacto.html" class="nav-link">Contacta</a>
+                <a href="../pages_lightMode/construccion.html" class="nav-link">Tienda</a>
+            </nav>
+
+            <div class="header-right">
+                <a href="../pages_darkMode/perfil_DM.html" class="icon toggle-darkmode">
+                    <img src="../media/iconos/luna.png" alt="Modo oscuro">
+                </a>
+                <a href="../pages_lightMode/perfil.html" class="icon perfil-icon">
+                    <img src="../media/images/foto_perfill.jpg" alt="Perfil">
+                </a>
+            </div>
+
+            <div class="header-right-space"></div>
+        </div>
+    </header>
+
+    <main class="container-main">
+        <div class="perfil-container">
+
+            <!-- LADO IZQUIERDO: Información del perfil -->
+            <div class="perfil-info">
+                <img src="../media/images/foto_perfill.jpg" alt="Foto de perfil" id="perfilFoto" class="perfil-foto">
+                <h2 id="perfilNombre">Nombre: Hermenegildo</h2>
+                <p>Email: herme@example.com</p>
+
+                <!-- Iconos de acciones -->
+                <div class="perfil-acciones">
+                    <img src="../media/iconos/mail.jpg" alt="Enviar correo" class="icono" onclick="abrirPopupCorreo()">
+                    <img src="../media/iconos/edit.png" alt="Editar perfil" class="icono" onclick="abrirPopupEditar()">
+                </div>
+            </div>
+
+            <!-- LADO DERECHO: Actualizaciones -->
+            <div class="perfil-actualizaciones">
+                <h2>Últimas actualizaciones</h2>
+
+                <div class="tarjeta-actualizacion">
+                    <img src="../media/perros/perro1/truan1.png" alt="Paquito">
+                    <p><strong>Truán</strong> ha superado su operación y se está recuperando.</p>
+                </div>
+
+                <div class="tarjeta-actualizacion">
+                    <img src="../media/gatos/gato2/vera2.png" alt="Rocky">
+                    <p><strong>Vera</strong> ha encontrado un hogar definitivo. 🎉</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <!-- 📌 POPUP para enviar correo -->
+    <div id="popup-correo" class="popup">
+        <div class="popup-content">
+            <h2>Enviar Correo</h2>
+            <form id="form-correo" onsubmit="enviarCorreo(event)">
+                <label for="para">Para:</label>
+                <input type="email" id="para" name="para" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <div class="popup-buttons">
+                    <button type="submit" class="enviar">Enviar</button>
+                    <button type="button" class="cancelar" onclick="cerrarPopupCorreo()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- POPUP PARA EDITAR PERFIL -->
+    <div id="popup-editar" class="popup">
+        <div class="popup-content">
+            <h2>Editar Perfil</h2>
+            <form id="form-editar" onsubmit="guardarEdicion(event)">
+                <label for="nuevoNombre">Nuevo Nombre:</label>
+                <input type="text" id="nuevoNombre" name="nuevoNombre" required>
+
+                <label for="nuevaFoto">Cambiar Foto:</label>
+                <input type="file" id="nuevaFoto" name="nuevaFoto" accept="image/*">
+
+                <div class="popup-buttons">
+                    <button onclick="abrirPopupEditar()">Guardar</button>
+                    <button type="button" class="cancelar" onclick="cerrarPopupEditar()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="../js/donacion.js"></script>
+    <script src="../js/perfil.js"></script>
+    <script src="../js/confirmar.js"></script>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-footer">
+            <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>
+            <nav>
+                <a href="../pages_lightMode/error_404.html">Términos y Condiciones</a> |
+                <a href="../pages_lightMode/error_404.html">Política de Privacidad</a> |
+                <a href="../pages_lightMode/error_404.html">Acceso Legal</a> |
+                <a href="../pages_lightMode/error_404.html">Política de Cookies</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-facebook.svg" alt="Icono de la red social Facebook">
+                </a>
+                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-instagram.svg" alt="Icono de la red social Instagram">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

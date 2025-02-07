@@ -1,0 +1,79 @@
+/* ======================= */
+/* FORMULARIO DE APADRINAMIENTO */
+/* ======================= */
+
+.formulario {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #63797F; /* Fondo del formulario */
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out; /* Animación opcional */
+}
+
+.formulario h2, 
+.formulario h3 {
+    text-align: center;
+    color: #D29F68; /* Verde consistente */
+    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente consistente */
+    margin-bottom: 20px;
+}
+
+.formulario div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff; /* Texto en blanco */
+    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente consistente */
+}
+
+input, select {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    padding: 10px;
+    margin: auto;
+    background-color: #cccccc; /* Fondo blanco para inputs */
+    color: #000000; /* Texto negro */
+    border: 1px solid #D29F68; /* Borde gris claro */
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Quicksand_Light', Arial, sans-serif; /* Fuente consistente */
+}
+
+button {
+    background-color: #33691D;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente consistente */
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #8BC24A; /* Verde claro para hover */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

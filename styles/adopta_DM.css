@@ -1,0 +1,67 @@
+/* Estilos generales */
+.formulario {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h2, .formulario h3 {
+    text-align: center;
+    color: #33691D;
+}
+
+.formulario div {
+    margin-bottom: 15px;
+}
+
+.container-main h1 {
+    margin-bottom: 20px;
+}
+
+.informacion-previa {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #63797F; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    border-left: 5px solid #33691D; /* Línea decorativa lateral */
+    font-size: 0.5rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #33691D;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #8BC24A;
+}
