@@ -1,50 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Kimba - Acoge</title>
+    <title>Kimba Shelter - Foster</title>
     <link rel="stylesheet" href="../misc/base.css">
     <link rel="stylesheet" href="../styles/acoge.css">
 </head>
 
 <body>
-    <!-- Popup de confirmación de envío del formulario -->
+    <!-- Popup for form submission confirmation -->
     <div id="popup-confirmacion" class="popup">
         <div class="popup-content">
-            <h2>Acción realizada con éxito.</h2>
-            <button onclick="cerrarPopupConfirmacion()">Aceptar</button>
+            <h2>Action completed successfully.</h2>
+            <button onclick="cerrarPopupConfirmacion()">Accept</button>
         </div>
     </div>
 
-    <!-- Pop Up donación -->
+    <!-- Donation Popup -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
-            <h2>Donación</h2>
+            <h2>Donation</h2>
 
-            <!-- Formulario de donación -->
+            <!-- Donation Form -->
             <form id="form-donacion" onsubmit="procesarDonacion(event)">
-                <label for="titular">Nombre del titular:</label>
+                <label for="titular">Cardholder Name:</label>
                 <input type="text" id="titular" name="titular" required>
 
-                <label for="tarjeta">Número de tarjeta:</label>
+                <label for="tarjeta">Card Number:</label>
                 <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
 
                 <label for="cvv">CVV:</label>
                 <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
 
-                <label for="cantidad">Cantidad a donar (€):</label>
+                <label for="cantidad">Amount to Donate (€):</label>
                 <input type="number" id="cantidad" name="cantidad" min="1" required>
 
-                <button type="submit">Donar</button>
-                <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
+                <button type="submit">Donate</button>
+                <button type="button" onclick="cerrarPopupDonacion()">Cancel</button>
             </form>
 
-            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <!-- Confirmation Message (initially hidden) -->
             <div id="mensaje-confirmacion" style="display: none;">
-                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
-                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+                <p>Donation completed successfully. Thank you for your support!</p>
+                <button onclick="cerrarPopupDonacion()">Accept</button>
             </div>
         </div>
     </div>
@@ -56,40 +56,39 @@
 
             <div class="header-left">
                 <a href="../pages_lightMode/principal.html">
-                    <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
+                    <img src="../media/iconos/icono_logo.png" alt="Kimba Shelter Logo" class="logo">
                 </a>
             </div>
 
             <nav class="header-center">
-                <a href="../pages_lightMode/sobre_nosotros.html" class="nav-link">Sobre nosotros</a>
+                <a href="../pages_lightMode/sobre_nosotros.html" class="nav-link">About Us</a>
 
                 <div class="dropdown">
-                    <a class="nav-link">Adopta</a>
+                    <a class="nav-link">Adopt</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../pages_lightMode/adopta_perro.html">🐶 Perros</a></li>
-                        <li><a href="../pages_lightMode/adopta_gato.html">🐱 Gatos</a></li>
+                        <li><a href="../pages_lightMode/adopta_perro.html">🐶 Dogs</a></li>
+                        <li><a href="../pages_l ghtMode/adopta_gato.html">🐱 Cats</a></li>
                     </ul>
                 </div>
 
                 <div class="dropdown">
-                    <a class="nav-link">Ayúdales</a>
+                    <a class="nav-link">Help Them</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../pages_lightMode/acoge.html">🏠 Acoge</a></li>
-                        <li><a href="#" onclick="abrirPopupDonacion(); return false;">💰 Dona</a></li>
-                        <li><a href="../pages_lightMode/apadrina.html">❤️ Apadrina</a></li>
+                        <li><a href="../pages_lightMode/acoge.html">🏠 Foster</a></li>
+                        <li><a href="#" onclick="abrirPopupDonacion(); return false;">💰 Donate</a></li>
+                        <li><a href="../pages_lightMode/apadrina.html">❤️ Sponsor</a></li>
                     </ul>
                 </div>
 
-                <a href="../pages_lightMode/contacto.html" class="nav-link">Contacta</a>
-                <a href="../pages_lightMode/construccion.html" class="nav-link">Tienda</a>
+                <a href="../pages_lightMode/contacto.html" class="nav-link">Contact</a>
+                <a href="../pages_lightMode/construccion.html" class="nav-link">Shop</a>
             </nav>
 
             <div class="header-right">
-                <a href="../pages_darkMode/acoge_DM.html" class="icon toggle-darkmode"><img
-                        src="../media/iconos/luna.png" alt="Modo oscuro"></a>
-                <a href="../pages_lightMode/login.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
-                <a href="../en-version/foster.html" alt="español"> <img src="../media/iconos/english.png" class="logo"> </a>
-
+                <a href="../en-version/foster_dark.html" class="icon toggle-darkmode"><img
+                        src="../media/iconos/luna.png" alt="Dark Mode"></a>
+                <a href="../pages_lightMode/login.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Profile"></a>
+                <a href="../pages_lightMode/acoge.html" alt="español"> <img src="../media/iconos/spanish.png" class="logo"> </a>
             </div>
 
             <div class="header-right-space"></div>
@@ -97,87 +96,87 @@
     </header>
 
     <main class="container-main">
-        <!-- Aquí se insertará el contenido de cada página -->
-        <h1>Acoge 🏡</h1>
+        <!-- Content for each page will be inserted here -->
+        <h1>Foster 🏡</h1>
         <section>
             <article class="formulario">
-                <h2>Formulario de Acogida</h2>
+                <h2>Foster Application Form</h2>
                 <form id="formulario-popup" onsubmit="mostrarPopup(event)">
-                    <!-- Datos personales -->
+                    <!-- Personal Information -->
                     <div>
-                        <label for="nombre">Nombre completo</label>
+                        <label for="nombre">Full Name</label>
                         <input type="text" id="nombre" name="nombre" required>
                     </div>
                     <div>
-                        <label for="dni">DNI/NIE</label>
+                        <label for="dni">ID Number (DNI/NIE)</label>
                         <input type="text" id="dni" name="dni" required>
                     </div>
                     <div>
-                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <label for="fecha_nacimiento">Date of Birth</label>
                         <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
                     </div>
                     <div>
-                        <label for="direccion">Dirección completa</label>
+                        <label for="direccion">Full Address</label>
                         <input type="text" id="direccion" name="direccion" required>
                     </div>
                     <div>
-                        <label for="telefono">Teléfono de contacto</label>
+                        <label for="telefono">Contact Phone Number</label>
                         <input type="tel" id="telefono" name="telefono" required>
                     </div>
                     <div>
-                        <label for="email">Correo electrónico (opcional)</label>
+                        <label for="email">Email (optional)</label>
                         <input type="email" id="email" name="email">
                     </div>
 
-                    <!-- Información sobre acogida -->
-                    <h3>Información sobre la acogida</h3>
+                    <!-- Foster Information -->
+                    <h3>Foster Information</h3>
                     <div>
-                        <label>¿Qué tipo de animal puedes acoger?</label><br>
+                        <label>What type of animal can you foster?</label><br>
                         <input type="checkbox" id="perro" name="tipo_animal[]" value="perro">
-                        <label for="perro">🐶 Perro</label>
+                        <label for="perro">🐶 Dog</label>
 
                         <input type="checkbox" id="gato" name="tipo_animal[]" value="gato">
-                        <label for="gato">🐱 Gato</label>
+                        <label for="gato">🐱 Cat</label>
 
                     </div>
                     <div>
-                        <label>¿Tienes otros animales en casa?</label><br>
+                        <label>Do you have other animals at home?</label><br>
                         <input type="radio" id="otros_si" name="otros_animales" value="si" required>
-                        <label for="otros_si">Sí</label>
+                        <label for="otros_si">Yes</label>
 
                         <input type="radio" id="otros_no" name="otros_animales" value="no" required>
                         <label for="otros_no">No</label>
                     </div>
                     <div>
-                        <label for="tipo_animales">Si tienes animales, ¿cuántos y de qué tipo?</label>
+                        <label for="tipo_animales">If you have animals, how many and what type?</label>
                         <input type="text" id="tipo_animales" name="tipo_animales">
                     </div>
                     <div>
-                        <label>¿Puedes acoger cachorros?</label><br>
+                        <label>Can you foster puppies/kittens?</label><br>
                         <input type="radio" id="cachorros_si" name="cachorros" value="si" required>
-                        <label for="cachorros_si">Sí</label>
+                        <label for="cachorros_si">Yes</label>
 
                         <input type="radio" id="cachorros_no" name="cachorros" value="no" required>
                         <label for="cachorros_no">No</label>
                     </div>
 
-                    <!-- Disponibilidad -->
-                    <h3>Disponibilidad</h3>
+                    <!-- Availability -->
+                    <h3>Availability</h3>
                     <div>
-                        <label for="fecha_inicio">¿Cuándo podrías empezar a acoger?</label>
+                        <label for="fecha_inicio">When could you start fostering?</label>
                         <input type="date" id="fecha_inicio" name="fecha_inicio" required>
                     </div>
                     <div>
-                        <label for="tiempo_acogida">¿Por cuánto tiempo podrías acoger al animal?</label>
+                        <label for="tiempo_acogida">How long could you foster the animal?</label>
                         <select id="tiempo_acogida" name="tiempo_acogida" required>
-                            <option value="">Selecciona una opción</option>
-                            <option value="menos_1_mes">Menos de 1 mes</option>
-                            <option value="1_3_meses">1-3 meses</option>
-                            <option value="indefinido">Indefinido (hasta que encuentre hogar)</option>
+                            <option value="">Select an option</option>
+                            <option value="menos_1_mes">Less than 1 month</option>
+                            <option value="1_3_meses">1-3 months</option>
+                            <option value="indefinido">Indefinite (until they find a home)</option>
                         </select>
                     </div>
 
-                    <button onclick="cerrarPopupConfirmacion()">Enviar Formulario</button>
+                    <button onclick="cerrarPopupConfirmacion()">Submit Form</button>
                 </form>
             </article>
         </section>
@@ -193,10 +192,10 @@
         <div class="container-footer">
             <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>
             <nav>
-                <a href="../pages_lightMode/error_404.html">Términos y Condiciones</a> |
-                <a href="../pages_lightMode/error_404.html">Política de Privacidad</a> |
-                <a href="../pages_lightMode/error_404.html">Acceso Legal</a> |
-                <a href="../pages_lightMode/error_404.html">Política de Cookies</a>
+                <a href="../pages_lightMode/error_404.html">Terms and Conditions</a> |
+                <a href="../pages_lightMode/error_404.html">Privacy Policy</a> |
+                <a href="../pages_lightMode/error_404.html">Legal Notice</a> |
+                <a href="../pages_lightMode/error_404.html">Cookie Policy</a>
             </nav>
             <div class="social-icons">
                 <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"

@@ -90,30 +90,3 @@
     text-decoration: underline;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links {
-        order: 1;
-        /* Asegura que los enlaces vayan primero */
-    }
-
-    .social-icons {
-        order: 2;
-        /* Asegura que los iconos vayan después */
-    }
-
-    .social-icons {
-        display: block;
-        width: 100%;
-        text-align: center;
-        /* Opcional, para centrar los iconos */
-        margin-top: 10px;
-        /* Espaciado opcional */
-    }
-}
