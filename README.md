@@ -105,10 +105,10 @@ Código sacado de la página de error 404 de la versión oscura.
 Tienes que validar tu CSS para ver si cumple la normativa (https://jigsaw.w3.org/css-validator/), adjunta las evidencias.
 
 Validación del .css de estilos globales
-![validacion_de_css](./validaciones_css/validacion_base_css.png)
+![validacion_de_css](./utils/validacion_base_css.png)
 
 Validación del .css de estilos de la página principal.
-![validacion_de_css](./validaciones_css/validacion_principal_css.png)
+![validacion_de_css](./utils/validacion_principal_css.png)
 
 4.5 Repositorio
 El proyecto debe estar en Github (Debes agregarme al repositorio con mi usuario envasador tiene la cara de BMO) y no debe haber ningún commit después de la fecha de la entrega recogida en Moodle.
@@ -129,6 +129,7 @@ Además, se recomienda incluir una breve conclusión sobre el resultado final y 
 Debéis entregar:
 
 Los archivos que correspondan al proyecto completo a través de GitHub y en la tarea asignada agregar el enlace al repositorio. Este repositorio tiene que estar público o si es privado que pueda tener acceso.
+
 Videotutorial explicando el proyecto. (se puede incluir en los archivos de GitHub)
 
 ---
