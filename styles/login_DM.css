@@ -34,7 +34,8 @@
     background-color: #ccc;
     border: 1px solid #33691D;
     border-radius: 5px;
-    font-family: 'Quicksand_Bold', Arial, sans-serif;}
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+}
 
 .login-container button {
     width: 100%;
@@ -55,8 +56,8 @@
 /* Estilos para el enlace de registro */
 .login-container p {
     font-family: 'Quicksand_Bold', Arial, sans-serif;
-        margin-top: 15px;
-        color: #ffffff;
+    margin-top: 15px;
+    color: #ffffff;
 }
 
 .login-container a {
@@ -64,9 +65,50 @@
     font-weight: bold;
     font-size: 1.5rem;
     font-family: 'Lemon Juice', Arial, sans-serif;
-        text-decoration: none;
+    text-decoration: none;
 }
 
 .login-container a:hover {
     text-decoration: underline;
+}
+
+
+/*----------------*/
+/*---RESPONSIVE---*/
+/*----------------*/
+
+/* Estilos para móviles */
+@media (max-width: 320px) {
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        order: 1;
+        /* Asegura que los enlaces vayan primero */
+    }
+
+    .social-icons {
+        order: 2;
+        /* Asegura que los iconos vayan después */
+    }
+
+    .social-icons {
+        display: block;
+        width: 100%;
+        text-align: center;
+        /* Opcional, para centrar los iconos */
+        margin-top: 10px;
+        /* Espaciado opcional */
+    }
+    body {
+        overflow-x: auto; /* Habilita el scroll horizontal */
+        overflow-y: auto; /* Habilita el scroll vertical */
+        width: 100%; /* Asegura que el body ocupe todo el ancho */
+        height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    }
+
 }

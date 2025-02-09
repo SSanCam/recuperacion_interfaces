@@ -8,27 +8,33 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-family: 'Quicksand_Light', Arial, sans-serif; /* Fuente general */
+    font-family: 'Quicksand_Light', Arial, sans-serif;
+    /* Fuente general */
 }
 
 .registro-container h2 {
-    color: white; /* Texto en blanco */
+    color: white;
+    /* Texto en blanco */
     margin-bottom: 20px;
-    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente para encabezado */
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    /* Fuente para encabezado */
 }
 
 .registro-container form {
     display: flex;
     flex-direction: column;
-    color: white; /* Texto en blanco dentro del formulario */
+    color: white;
+    /* Texto en blanco dentro del formulario */
 }
 
 .registro-container label {
     text-align: left;
     font-weight: bold;
     margin-bottom: 5px;
-    color: white; /* Texto en blanco */
-    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente para etiquetas */
+    color: white;
+    /* Texto en blanco */
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    /* Fuente para etiquetas */
 }
 
 .registro-container input {
@@ -38,8 +44,10 @@
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Quicksand_Light', Arial, sans-serif; /* Fuente para entradas */
-    color: black; /* Texto negro dentro de los inputs */
+    font-family: 'Quicksand_Light', Arial, sans-serif;
+    /* Fuente para entradas */
+    color: black;
+    /* Texto negro dentro de los inputs */
 }
 
 .registro-container button {
@@ -51,7 +59,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente consistente */
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    /* Fuente consistente */
     transition: background-color 0.3s ease;
 }
 
@@ -62,17 +71,49 @@
 /* Estilos para el enlace de inicio de sesión */
 .registro-container p {
     margin-top: 15px;
-    color: white; /* Texto en blanco */
-    font-family: 'Quicksand_Light', Arial, sans-serif; /* Fuente para párrafo */
+    color: white;
+    /* Texto en blanco */
+    font-family: 'Quicksand_Light', Arial, sans-serif;
+    /* Fuente para párrafo */
 }
 
 .registro-container a {
-    color: white; /* Texto en blanco */
+    color: white;
+    /* Texto en blanco */
     font-weight: bold;
-    font-family: 'Lemon Juice', Arial, sans-serif; /* Fuente especial para enlaces */
+    font-family: 'Lemon Juice', Arial, sans-serif;
+    /* Fuente especial para enlaces */
     text-decoration: none;
 }
 
 .registro-container a:hover {
     text-decoration: underline;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        order: 1;
+        /* Asegura que los enlaces vayan primero */
+    }
+
+    .social-icons {
+        order: 2;
+        /* Asegura que los iconos vayan después */
+    }
+
+    .social-icons {
+        display: block;
+        width: 100%;
+        text-align: center;
+        /* Opcional, para centrar los iconos */
+        margin-top: 10px;
+        /* Espaciado opcional */
+    }
 }

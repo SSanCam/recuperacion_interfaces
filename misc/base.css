@@ -363,3 +363,146 @@ footer {
 .social-icons a img:hover {
     transform: scale(1.4);
 }
+
+
+/*---------------------*/
+/*-----Responsive------*/
+/*---------------------*/
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        /* Reducir el tamaño de la fuente para móviles */
+    }
+
+    h1 {
+        font-size: 3rem;
+        /* Reducir el tamaño del título principal */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        /* Reducir el tamaño de los subtítulos */
+    }
+
+    p {
+        font-size: 1rem;
+        /* Reducir el tamaño del texto */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-left a {
+        width: 6vh;
+        /* Reducir el tamaño del círculo del logo */
+        height: 6vh;
+    }
+
+    .logo {
+        height: 4vh;
+        /* Reducir el tamaño del logo */
+    }
+
+    .header-center {
+        gap: 10px;
+        /* Reducir el espacio entre los enlaces */
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        /* Reducir el tamaño de la fuente de los enlaces */
+        padding: 8px 12px;
+        /* Reducir el padding */
+    }
+
+    .icon img {
+        height: 40px;
+        /* Reducir el tamaño de los iconos */
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 100%;
+        /* Ocupar todo el ancho */
+        padding: 15px;
+        /* Reducir el padding */
+        margin: 20px auto;
+        /* Reducir el margen */
+    }
+
+    .login-container input {
+        padding: 8px;
+        /* Reducir el padding de los inputs */
+    }
+
+    .login-container button {
+        padding: 8px;
+        /* Reducir el padding del botón */
+        font-size: 1rem;
+        /* Reducir el tamaño de la fuente del botón */
+    }
+
+    .login-container a {
+        font-size: 1.2rem;
+        /* Reducir el tamaño de la fuente del enlace */
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 1rem;
+        /* Reducir el tamaño de la fuente */
+        padding: 5px 0;
+        /* Reducir el padding */
+    }
+
+    .container-footer nav a {
+        margin: 0 5px;
+        /* Reducir el espacio entre los enlaces */
+    }
+
+    .social-icons a img {
+        height: 25px;
+        /* Reducir el tamaño de los iconos sociales */
+    }
+}
+
+@media (max-width: 768px) {
+    .container-main {
+        padding-top: 10vh;
+        /* Reducir el padding superior */
+        padding-bottom: 10vh;
+        /* Reducir el padding inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-center {
+        flex-direction: column;
+        /* Cambiar a disposición vertical */
+        gap: 5px;
+        /* Reducir el espacio entre los enlaces */
+    }
+
+    .nav-link {
+        width: 100%;
+        /* Ocupar todo el ancho */
+        text-align: center;
+        /* Centrar el texto */
+    }
+
+    .login-container {
+        padding: 10px;
+        /* Reducir aún más el padding */
+    }
+
+    .login-container input {
+        padding: 6px;
+        /* Reducir el padding de los inputs */
+    }
+
+    .login-container button {
+        padding: 6px;
+        /* Reducir el padding del botón */
+    }
+}
